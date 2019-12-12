@@ -9,6 +9,7 @@ class Backer
     @backed_projects<<project
     if !project.backers.include?(self)
       project.add_backer(self)
+    end
   end
   def backed_projects
     @backed_projects
